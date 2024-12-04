@@ -68,6 +68,9 @@ foreach(_xacro ${_world_xacros})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_fast_highrtf_knob_world ALL DEPENDS ${_fast_highrtf_knob_world})
 endforeach()
 
+# install python modules
+catkin_python_setup()
+
 # set environment variable GAZEBO_MODEL_PATH
 add_subdirectory(env-hooks)
 
