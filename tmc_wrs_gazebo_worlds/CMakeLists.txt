@@ -1,11 +1,17 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(tmc_wrs_gazebo_worlds)
 
-find_package(catkin REQUIRED)
-find_package(xacro REQUIRED)
+set(ROS1 FALSE)
+if(DEFINED ENV{ROS_DISTRO})
+  if($ENV{ROS_DISTRO} STREQUAL "noetic")
+    set(ROS1 TRUE)
+  endif()
+  if($ENV{ROS_DISTRO} STREQUAL "melodic")
+    set(ROS1 TRUE)
+  endif()
+endif()
 
-catkin_package(
-)
+find_package(xacro REQUIRED)
 
 file(GLOB _world_xacros "${PROJECT_SOURCE_DIR}/worlds/*.world.xacro")
 file(GLOB_RECURSE _component_xacros "${PROJECT_SOURCE_DIR}/worlds/include/*.xacro")
@@ -68,29 +74,52 @@ foreach(_xacro ${_world_xacros})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_fast_highrtf_knob_world ALL DEPENDS ${_fast_highrtf_knob_world})
 endforeach()
 
-# install python modules
-catkin_python_setup()
+if(ROS1)
+    find_package(catkin REQUIRED)
+    catkin_package()
+    # install python modules
+    catkin_python_setup()
 
-# set environment variable GAZEBO_MODEL_PATH
-add_subdirectory(env-hooks)
+    # set environment variable GAZEBO_MODEL_PATH
+    add_subdirectory(env-hooks)
 
-install(
-  DIRECTORY scripts/
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-  USE_SOURCE_PERMISSIONS
-  FILES_MATCHING
-  PATTERN "scripts/*"
-)
+    install(
+        DIRECTORY scripts/
+        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        USE_SOURCE_PERMISSIONS
+        FILES_MATCHING
+        PATTERN "scripts/*"
+    )
 
-install(DIRECTORY
-  models
-  maps
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+    install(DIRECTORY
+        models
+        maps
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+    )
 
-install(
-  DIRECTORY worlds
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-  FILES_MATCHING PATTERN "*.world"
-  PATTERN "include" EXCLUDE
-)
+    install(
+        DIRECTORY worlds
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+        FILES_MATCHING PATTERN "*.world"
+        PATTERN "include" EXCLUDE
+    )
+else()
+  find_package(ament_cmake REQUIRED)
+  find_package(ament_cmake_python REQUIRED)
+  ament_python_install_package(
+    ${PROJECT_NAME}
+    PACKAGE_DIR src/${PROJECT_NAME}
+  )
+  install(DIRECTORY
+    models
+    maps
+    DESTINATION share/${PROJECT_NAME}
+  )
+  install(
+    DIRECTORY worlds
+    DESTINATION share/${PROJECT_NAME}
+    FILES_MATCHING PATTERN "*.world"
+    PATTERN "include" EXCLUDE
+  )
+  ament_package()
+endif()
