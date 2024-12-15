@@ -16,6 +16,14 @@ find_package(xacro REQUIRED)
 file(GLOB _world_xacros "${PROJECT_SOURCE_DIR}/worlds/*.world.xacro")
 file(GLOB_RECURSE _component_xacros "${PROJECT_SOURCE_DIR}/worlds/include/*.xacro")
 
+if(ROS1)
+  set(_cmd_xacro_start "${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro")
+  set(_cmd_xacro_end "")
+else()
+  set(_cmd_xacro_start "/opt/ros/$ENV{ROS_DISTRO}/bin/xacro")
+  set(_cmd_xacro_end "")
+endif()
+
 # Generate world files from each *.world.xacro files.
 foreach(_xacro ${_world_xacros})
     get_filename_component(_dir ${_xacro} PATH)
@@ -34,19 +42,19 @@ foreach(_xacro ${_world_xacros})
     add_custom_command(
         OUTPUT ${_default_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=false highrtf:=false trofast_knob:=false > ${_default_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=false highrtf:=false trofast_knob:=false > ${_default_world}${_cmd_xacro_end})
     add_custom_command(
         OUTPUT ${_default_highrtf_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=false highrtf:=true trofast_knob:=false > ${_default_highrtf_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=false highrtf:=true trofast_knob:=false > ${_default_highrtf_world}${_cmd_xacro_end})
     add_custom_command(
         OUTPUT ${_fast_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=true highrtf:=false trofast_knob:=false > ${_fast_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=true highrtf:=false trofast_knob:=false > ${_fast_world}${_cmd_xacro_end})
     add_custom_command(
         OUTPUT ${_fast_highrtf_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=true highrtf:=true trofast_knob:=false > ${_fast_highrtf_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=true highrtf:=true trofast_knob:=false > ${_fast_highrtf_world}${_cmd_xacro_end})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_default_world ALL DEPENDS ${_default_world})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_default_highrtf_world ALL DEPENDS ${_default_highrtf_world})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_fast_world ALL DEPENDS ${_fast_world})
@@ -55,19 +63,19 @@ foreach(_xacro ${_world_xacros})
     add_custom_command(
         OUTPUT ${_default_knob_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=false highrtf:=false trofast_knob:=true > ${_default_knob_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=false highrtf:=false trofast_knob:=true > ${_default_knob_world}${_cmd_xacro_end})
     add_custom_command(
         OUTPUT ${_default_highrtf_knob_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=false highrtf:=true trofast_knob:=true > ${_default_highrtf_knob_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=false highrtf:=true trofast_knob:=true > ${_default_highrtf_knob_world}${_cmd_xacro_end})
     add_custom_command(
         OUTPUT ${_fast_knob_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=true highrtf:=false trofast_knob:=true > ${_fast_knob_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=true highrtf:=false trofast_knob:=true > ${_fast_knob_world}${_cmd_xacro_end})
     add_custom_command(
         OUTPUT ${_fast_highrtf_knob_world}
         DEPENDS ${_xacro} ${_component_xacros}
-        COMMAND ${CATKIN_DEVEL_PREFIX}/env.sh rosrun xacro xacro ${_xacro} fast_physics:=true highrtf:=true trofast_knob:=true > ${_fast_highrtf_knob_world})
+        COMMAND ${_cmd_xacro_start} ${_xacro} fast_physics:=true highrtf:=true trofast_knob:=true > ${_fast_highrtf_knob_world}${_cmd_xacro_end})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_default_knob_world ALL DEPENDS ${_default_knob_world})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_default_highrtf_knob_world ALL DEPENDS ${_default_highrtf_knob_world})
     add_custom_target(${PROJECT_NAME}_${_name}_gen_fast_knob_world ALL DEPENDS ${_fast_knob_world})
