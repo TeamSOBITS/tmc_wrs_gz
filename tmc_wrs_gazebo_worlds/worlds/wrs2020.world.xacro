@@ -159,11 +159,13 @@ POSSIBILITY OF SUCH DAMAGE.
     </include>
     <include>
       <name>person_standing</name>
+      <static>1</static>
       <uri>model://person_standing</uri>
       <pose frame=''>0.7 1.5 0 0 -0 0</pose>
     </include>
     <include>
       <name>person_standing_0</name>
+      <static>1</static>
       <uri>model://person_standing</uri>
       <pose frame=''>1.8 1.5 0 0 -0 0</pose>
     </include>
