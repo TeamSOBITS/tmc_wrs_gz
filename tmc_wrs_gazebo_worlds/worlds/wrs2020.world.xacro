@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
 Copyright (c) 2017, Toyota Motor Corporation
 All rights reserved.
@@ -27,12 +27,23 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 -->
-<sdf version='1.6' xmlns:xacro="http://www.ros.org/wiki/xacro">
+<sdf version='1.8' xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find tmc_wrs_gz_worlds)/worlds/include/physics.xacro" />
+
   <xacro:arg name="fast_physics" default="true" />
   <xacro:arg name="highrtf" default="false" />
+  <xacro:arg name="trofast_knob" default="true" />
+
   <world name='default'>
+
+    <!-- Physics -->
+    <xacro:physics fast_physics="$(arg fast_physics)" highrtf="$(arg highrtf)" />
+
+    <!-- Sun light -->
     <light name='sun' type='directional'>
-      <cast_shadows>1</cast_shadows>
+      <xacro:if value="$(arg fast_physics)">
+        <cast_shadows>false</cast_shadows>
+      </xacro:if>
       <pose frame=''>0 0 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
@@ -44,15 +55,11 @@ POSSIBILITY OF SUCH DAMAGE.
       </attenuation>
       <direction>-0.5 0.1 -0.9</direction>
     </light>
+
+    <!-- Gravity -->
     <gravity>0 0 -9.8</gravity>
-    <xacro:include filename="include/physics.xacro" />
-    <scene>
-      <ambient>0.4 0.4 0.4 1</ambient>
-      <background>0.7 0.7 0.7 1</background>
-      <xacro:if value="$(arg fast_physics)">
-        <shadows>false</shadows>
-      </xacro:if>
-    </scene>
+
+    <!-- Include ground plane -->
     <include>
       <name>wrc_ground_plane</name>
       <static>1</static>
@@ -157,17 +164,17 @@ POSSIBILITY OF SUCH DAMAGE.
       <uri>model://wrc_container_b</uri>
       <pose frame=''>-2.7 0.1 0.4 0 -0 0</pose>
     </include>
-    <include>
+    <!-- <include>
       <name>person_standing</name>
       <static>1</static>
       <uri>model://person_standing</uri>
       <pose frame=''>0.7 1.5 0 0 -0 0</pose>
-    </include>
-    <include>
+    </include> -->
+    <!-- <include>
       <name>person_standing_0</name>
       <static>1</static>
       <uri>model://person_standing</uri>
       <pose frame=''>1.8 1.5 0 0 -0 0</pose>
-    </include>
+    </include> -->
   </world>
 </sdf>
