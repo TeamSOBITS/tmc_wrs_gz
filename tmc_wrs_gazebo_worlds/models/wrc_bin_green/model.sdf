@@ -22,10 +22,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1 1</specular>
         </material>
       </visual>
       <collision name="front">
@@ -44,10 +43,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1 1</specular>
         </material>
       </visual>
       <collision name="back">
@@ -66,10 +64,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1 1</specular>
         </material>
       </visual>
       <collision name="left">
@@ -88,10 +85,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1 1</specular>
         </material>
       </visual>
       <collision name="right">
@@ -110,10 +106,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1 1</specular>
         </material>
       </visual>
     </link>

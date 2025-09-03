@@ -22,10 +22,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Gray</name>
-          </script>
+          <ambient> .175 .175 .175  1.0</ambient>
+          <diffuse> .175 .175 .175  1.0</diffuse>
+          <specular> .175 .175 .175 1.000000 1.500000</specular>
         </material>
       </visual>
       <collision name="wall_front">
@@ -44,10 +43,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Gray</name>
-          </script>
+          <ambient> .175 .175 .175  1.0</ambient>
+          <diffuse> .175 .175 .175  1.0</diffuse>
+          <specular> .175 .175 .175 1.000000 1.500000</specular>
         </material>
       </visual>
       <collision name="wall_left">
@@ -66,10 +64,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Gray</name>
-          </script>
+          <ambient> .175 .175 .175  1.0</ambient>
+          <diffuse> .175 .175 .175  1.0</diffuse>
+          <specular> .175 .175 .175 1.000000 1.500000</specular>
         </material>
       </visual>
       <collision name="wall_right">
@@ -88,10 +85,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Gray</name>
-          </script>
+          <ambient> .175 .175 .175  1.0</ambient>
+          <diffuse> .175 .175 .175  1.0</diffuse>
+          <specular> .175 .175 .175 1.000000 1.500000</specular>
         </material>
       </visual>
       <collision name="wall_center">
@@ -110,10 +106,9 @@
           </box>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Gray</name>
-          </script>
+          <ambient> .175 .175 .175  1.0</ambient>
+          <diffuse> .175 .175 .175  1.0</diffuse>
+          <specular> .175 .175 .175 1.000000 1.500000</specular>
         </material>
       </visual>
     </link>
