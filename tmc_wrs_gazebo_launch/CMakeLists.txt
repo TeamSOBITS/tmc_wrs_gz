@@ -1,37 +1,24 @@
-cmake_minimum_required(VERSION 3.5)
-project(tmc_wrs_gazebo_launch)
+cmake_minimum_required(VERSION 3.8)
+project(tmc_wrs_gz_launch)
 
-set(ROS1 FALSE)
-if(DEFINED ENV{ROS_DISTRO})
-  if($ENV{ROS_DISTRO} STREQUAL "noetic")
-    set(ROS1 TRUE)
-  endif()
-  if($ENV{ROS_DISTRO} STREQUAL "melodic")
-    set(ROS1 TRUE)
-  endif()
+# find dependencies
+find_package(ament_cmake REQUIRED)
+
+find_package(xacro REQUIRED)
+find_package(urdf REQUIRED)
+find_package(ros_gz_sim REQUIRED)
+find_package(tmc_wrs_gz_worlds REQUIRED)
+
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  set(ament_cmake_copyright_FOUND TRUE)
+  set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
 endif()
 
-if(ROS1)
-  find_package(catkin REQUIRED)
-  catkin_package()
-  install(
-    DIRECTORY launch
-    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-    FILES_MATCHING
-    PATTERN "*.launch"
-  )
-  install(DIRECTORY
-    config
-    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-  )
-  if (CATKIN_ENABLE_TESTING)
-    find_package(roslaunch REQUIRED)
-    roslaunch_add_file_check(launch USE_TEST_DEPENDENCIES)
-  endif()
-else()
-  find_package(ament_cmake REQUIRED)
-  install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
-  install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
-  ament_package()
-endif()
-
+ament_package()

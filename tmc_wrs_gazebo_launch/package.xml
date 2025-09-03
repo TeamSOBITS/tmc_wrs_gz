@@ -1,32 +1,26 @@
 <?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>tmc_wrs_gazebo_launch</name>
+  <name>tmc_wrs_gz_launch</name>
   <version>1.0.0</version>
   <description>Launch files for WRS2020</description>
 
-  <maintainer email="xr-hsr-support@mail.toyota.co.jp">HSR Support</maintainer>
+  <maintainer email="kvalentincardenas@gmail.com">Keith Valentin</maintainer>
 
   <license>BSD 3-clause Clear License</license>
 
   <author>Yosuke Matsusaka</author>
   <author>Nobuyuki Matsuno</author>
 
-  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
-  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <exec_depend>roslaunch</exec_depend>
-
-  <exec_depend>hsrb_rosnav_config</exec_depend>
-  <exec_depend>hsrb_moveit_config</exec_depend>
-
-  <exec_depend>hsrb_gazebo_launch</exec_depend>
-  <exec_depend>hsrb_gazebo_task_evaluators</exec_depend>
-  <exec_depend>tmc_wrs_gazebo_worlds</exec_depend>
-  <exec_depend>rosbag</exec_depend>
-  <exec_depend>rviz</exec_depend>
+  <depend>tmc_wrs_gz_worlds</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>urdf</depend>
+  <depend>xacro</depend>
+  <depend>rviz</depend>
 
   <export>
-    <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
-    <build_type condition="$ROS_VERSION == 1">catkin</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
