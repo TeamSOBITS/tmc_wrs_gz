@@ -24,7 +24,7 @@
         <material>
           <ambient>0 0 0 1</ambient>
           <diffuse>0 0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1 5.0</specular>
+          <!-- <specular>0.1 0.1 0.1 1 5.0</specular> -->
         </material>
       </visual>
       <collision name="front">
@@ -45,7 +45,7 @@
         <material>
           <ambient>0 0 0 1</ambient>
           <diffuse>0 0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1 5.0</specular>
+          <!-- <specular>0.1 0.1 0.1 1 5.0</specular> -->
         </material>
       </visual>
       <collision name="back">
@@ -66,7 +66,7 @@
         <material>
           <ambient>0 0 0 1</ambient>
           <diffuse>0 0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1 5.0</specular>
+          <!-- <specular>0.1 0.1 0.1 1 5.0</specular> -->
         </material>
       </visual>
       <collision name="left">
@@ -87,7 +87,7 @@
         <material>
           <ambient>0 0 0 1</ambient>
           <diffuse>0 0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1 5.0</specular>
+          <!-- <specular>0.1 0.1 0.1 1 5.0</specular> -->
         </material>
       </visual>
       <collision name="right">
@@ -108,7 +108,7 @@
         <material>
           <ambient>0 0 0 1</ambient>
           <diffuse>0 0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1 5.0</specular>
+          <!-- <specular>0.1 0.1 0.1 1 5.0</specular> -->
         </material>
       </visual>
     </link>

@@ -24,7 +24,7 @@
         <material>
           <ambient>1 0.5088 0.0468 1</ambient>
           <diffuse>1 0.5088 0.0468 1</diffuse>
-          <specular>0.5 0.5 0.5 128</specular>
+          <!-- <specular>0.5 0.5 0.5 128</specular> -->
         </material>
       </visual>
       <visual name='knob_base'>
@@ -38,7 +38,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <visual name='knob_pole'>
@@ -52,7 +52,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <visual name='knob_handle'>
@@ -65,7 +65,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name='collision_trofast'>

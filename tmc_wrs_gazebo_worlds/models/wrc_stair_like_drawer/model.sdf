@@ -24,7 +24,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit1_1_left_low">
@@ -45,7 +45,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit1_1_left_high">
@@ -66,7 +66,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit1_1_right_low">
@@ -87,7 +87,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit1_1_right_high">
@@ -108,7 +108,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="slit2">
@@ -129,7 +129,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_1_left_low">
@@ -150,7 +150,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_1_left_high">
@@ -171,7 +171,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_1_right_low">
@@ -192,7 +192,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_1_right_high">
@@ -213,7 +213,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_2_left_low">
@@ -234,7 +234,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_2_left_high">
@@ -255,7 +255,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_2_right_low">
@@ -276,7 +276,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="holder_slit2_2_right_high">
@@ -297,7 +297,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="slit3">
@@ -318,7 +318,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="slit4">
@@ -339,7 +339,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="top1">
@@ -360,7 +360,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="top1_front">
@@ -381,7 +381,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="top2">
@@ -402,7 +402,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="top2_front">
@@ -423,7 +423,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="top3">
@@ -444,7 +444,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="top3_front">
@@ -465,7 +465,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
       <collision name="bottom">
@@ -486,7 +486,7 @@
         <material>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 128</specular>
+          <!-- <specular>.1 .1 .1 128</specular> -->
         </material>
       </visual>
     </link>
