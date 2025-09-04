@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tmc_wrs_gz</name>
+  <version>1.0.0</version>
+  <description>tmc_wrs_gz meta package</description>
+
+  <maintainer email="kvalentincardenas@hotmail.com">Keith Valentin</maintainer>
+
+  <license>BSD 3-clause Clear License</license>
+
+  <author>Yosuke Matsusaka</author>
+  <author>Nobuyuki Matsuno</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>tmc_wrs_gz_launch</depend>
+  <depend>tmc_wrs_gz_worlds</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
