@@ -28,16 +28,34 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 -->
 <sdf version='1.8' xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find tmc_wrs_gz_worlds)/worlds/include/physics.xacro" />
-
-  <xacro:arg name="fast_physics" default="true" />
-  <xacro:arg name="highrtf" default="false" />
-  <xacro:arg name="trofast_knob" default="true" />
 
   <world name='default'>
 
     <!-- Physics -->
-    <xacro:physics fast_physics="$(arg fast_physics)" highrtf="$(arg highrtf)" />
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <plugin name='gz::sim::systems::Imu' filename='gz-sim-imu-system'/>
+    <!-- <plugin name='gz::sim::systems::AirPressure' filename='gz-sim-air-pressure-system'/> -->
+    <!-- <plugin name='gz::sim::systems::ApplyLinkWrench' filename='gz-sim-apply-link-wrench-system'/> -->
+    <!-- <plugin name='gz::sim::systems::NavSat' filename='gz-sim-navsat-system'/> -->
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <scene>
+      <grid>true</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
 
     <!-- Sun light -->
     <light name='sun' type='directional'>
