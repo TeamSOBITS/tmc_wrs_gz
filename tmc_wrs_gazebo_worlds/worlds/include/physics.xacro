@@ -29,22 +29,25 @@ POSSIBILITY OF SUCH DAMAGE.
 -->
 <sdf version="1.8" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="physics" params="fast_physics:=true highrtf:=false" >
+  <xacro:macro name="physics" params="fast_physics:=true highrtf:=false">
 
-    <physics name="1ms" type="ignored">
-      <xacro:if value="$(arg fast_physics)">
-        <xacro:unless value="$(arg highrtf)">
+    <physics name="3ms" type="ignored">
+      <!-- <xacro:if value="$(eval fast_physics)">
+        <xacro:unless value="$(eval highrtf)">
           <real_time_update_rate>333.0</real_time_update_rate>
         </xacro:unless>
-        <xacro:if value="$(arg highrtf)">
+        <xacro:if value="$(eval highrtf)">
           <real_time_update_rate>0</real_time_update_rate>
         </xacro:if>
         <max_step_size>0.003</max_step_size>
       </xacro:if>
-      <xacro:if value="$(arg highrtf)">
+      <xacro:if value="$(eval highrtf)">
         <real_time_update_rate>0</real_time_update_rate>
-      </xacro:if>
+      </xacro:if> -->
+      <real_time_update_rate>333.0</real_time_update_rate>
+      <max_step_size>0.003</max_step_size>
     </physics>
+
 
     <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
     <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
