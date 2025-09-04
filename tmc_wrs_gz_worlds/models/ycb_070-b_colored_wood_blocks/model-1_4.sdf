@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.4">
+<sdf version='1.8'>
   <model name='ycb_070-b_colored_wood_blocks'>
     <link name='body'>
       <inertial>
