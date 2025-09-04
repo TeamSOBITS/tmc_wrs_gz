@@ -73,7 +73,7 @@ First, please set up the following environment before proceeding to the next ins
 
 2. Clone this repository.
     ```sh
-    $ git clone https://github.com/TeamSOBITS/tmc_wrs_gz
+    $ git clone -b humble-devel https://github.com/TeamSOBITS/tmc_wrs_gz
     ```
 3. Compile the package.
     ```sh

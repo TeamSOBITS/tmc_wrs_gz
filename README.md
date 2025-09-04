@@ -71,7 +71,7 @@
 
 2. 本レポジトリをcloneします．
     ```sh
-    $ git clone https://github.com/TeamSOBITS/tmc_wrs_gz
+    $ git clone -b humble-devel https://github.com/TeamSOBITS/tmc_wrs_gz
     ```
 3. パッケージをコンパイルします．
     ```sh
