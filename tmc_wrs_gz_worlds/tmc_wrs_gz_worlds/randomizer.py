@@ -63,15 +63,15 @@ task2_shelf_plate2 = [
 food = {
     "prefix": "food",
     "items": [
-        "ycb_002_master_chef_can",   # Master chef coffee can
-        "ycb_003_cracker_box",       # Cheez-it cracker box
-        "ycb_004_sugar_box",         # Domino sugar box
-        "ycb_005_tomato_soup_can",   # Tomato soup can
+        "ycb_001_chips_can",         # Cheez-it cracker box
+        "ycb_002_sugar_box",         # Domino sugar box
+        "ycb_003_jell-o_chocolate_pudding_box",       # jell-o chocolate pudding box
+        "ycb_005_spam",              # Spam potted meat can
         "ycb_006_mustard_bottle",    # French's mustard bottle
         "ycb_007_tuna_fish_can",     # Starkist tuna fish can
         "ycb_008_pudding_box",       # Jell-o chocolate pudding box
         "ycb_009_gelatin_box",       # Jell-o strawberry gelatin box
-        "ycb_010_potted_meat_can",   # Spam potted meat can
+        "ycb_010_tomato_soup_can",   # Tomato soup can
         "ycb_011_banana",            # Plastic banana
         "ycb_012_strawberry",        # Plastic strawberries
         "ycb_013_apple",             # Plastic apple

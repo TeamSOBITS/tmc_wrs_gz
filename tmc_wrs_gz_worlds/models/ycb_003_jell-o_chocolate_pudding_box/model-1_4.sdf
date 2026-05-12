@@ -19,7 +19,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/jelll-o_pudding_box/meshes/textured.dae</uri>
+            <uri>model://ycb_003_jell-o_chocolate_pudding_box/meshes/textured.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -28,7 +28,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/jelll-o_pudding_box/meshes/nontextured.stl</uri>
+            <uri>model://ycb_003_jell-o_chocolate_pudding_box/meshes/nontextured.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>
