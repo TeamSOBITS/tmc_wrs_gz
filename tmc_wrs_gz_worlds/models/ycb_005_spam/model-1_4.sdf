@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
-  <model name='ycb_010_potted_meat_can'>
+  <model name='ycb_005_spam'>
     <link name='body'>
       <inertial>
         <mass>0.478077558604</mass>
@@ -15,20 +15,20 @@
         </inertia>
       </inertial>
 
-      <visual name='ycb_010_potted_meat_can_visual'>
+      <visual name='ycb_005_spam_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/spam/meshes/textured.dae</uri>
+            <uri>model://ycb_005_spam/meshes/textured.dae</uri>
           </mesh>
         </geometry>
       </visual>
 
-      <collision name='ycb_010_potted_meat_can_collision'>
+      <collision name='ycb_005_spam_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/spam/meshes/nontextured.stl</uri>
+            <uri>model://ycb_005_spam/meshes/nontextured.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>

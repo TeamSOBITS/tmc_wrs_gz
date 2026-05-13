@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
-  <model name='ycb_003_cracker_box'>
+  <model name='ycb_001_cheez-it'>
     <link name='body'>
       <inertial>
         <mass>2.93393821406</mass>
@@ -15,20 +15,20 @@
         </inertia>
       </inertial>
 
-      <visual name='ycb_003_cracker_box_visual'>
+      <visual name='ycb_001_cheez-it_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/cheez-it/meshes/textured.dae</uri>
+            <uri>model://ycb_001_cheez-it/meshes/textured.dae</uri>
           </mesh>
         </geometry>
       </visual>
 
-      <collision name='ycb_003_cracker_box_collision'>
+      <collision name='ycb_001_cheez-it_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/cheez-it/meshes/nontextured.stl</uri>
+            <uri>model://ycb_001_cheez-it/meshes/nontextured.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>

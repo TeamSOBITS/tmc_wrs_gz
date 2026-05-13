@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
-  <model name='ycb_002_master_chef_can'>
+  <model name='ycb_006_coffee_can'>
     <link name='body'>
       <inertial>
         <mass>1.42361968467</mass>
@@ -15,20 +15,20 @@
         </inertia>
       </inertial>
 
-      <visual name='ycb_002_master_chef_can_visual'>
+      <visual name='ycb_006_coffee_can_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/kitchen_item/coffee_can/meshes/textured.dae</uri>
+            <uri>model://ycb_006_coffee_can/meshes/textured.dae</uri>
           </mesh>
         </geometry>
       </visual>
 
-      <collision name='ycb_002_master_chef_can_collision'>
+      <collision name='ycb_006_coffee_can_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/kitchen_item/coffee_can/meshes/nontextured.stl</uri>
+            <uri>model://ycb_006_coffee_can/meshes/nontextured.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version='1.8'>
-  <model name='ycb_004_sugar_box'>
+  <model name='ycb_002_sugar_box'>
     <link name='body'>
       <inertial>
         <mass>0.514</mass>
@@ -14,19 +14,19 @@
           <izz>0.000408012196346</izz>
         </inertia>
       </inertial>
-      <visual name='ycb_004_sugar_box_visual'>
+      <visual name='ycb_002_sugar_box_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb_004_sugar_box/meshes/textured.dae</uri>
+            <uri>model://ycb_002_sugar_box/meshes/textured.dae</uri>
           </mesh>
         </geometry>
       </visual>
-      <collision name='ycb_004_sugar_box_collision'>
+      <collision name='ycb_002_sugar_box_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb_004_sugar_box/meshes/nontextured.stl</uri>
+            <uri>model://ycb_002_sugar_box/meshes/nontextured.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>

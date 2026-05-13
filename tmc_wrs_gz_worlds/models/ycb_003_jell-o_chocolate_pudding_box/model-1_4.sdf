@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
-  <model name='ycb_008_pudding_box'>
+  <model name='ycb_003_jell-o_chocolate_pudding_box'>
     <link name='body'>
       <inertial>
         <mass>0.461392313357</mass>
@@ -15,20 +15,20 @@
         </inertia>
       </inertial>
 
-      <visual name='ycb_008_pudding_box_visual'>
+      <visual name='ycb_003_jell-o_chocolate_pudding_box_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/jelll-o_pudding_box/meshes/textured.dae</uri>
+            <uri>model://ycb_003_jell-o_chocolate_pudding_box/meshes/textured.dae</uri>
           </mesh>
         </geometry>
       </visual>
 
-      <collision name='ycb_008_pudding_box_collision'>
+      <collision name='ycb_003_jell-o_chocolate_pudding_box_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://ycb/food/jelll-o_pudding_box/meshes/nontextured.stl</uri>
+            <uri>model://ycb_003_jell-o_chocolate_pudding_box/meshes/nontextured.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>
