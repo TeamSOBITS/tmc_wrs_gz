@@ -63,7 +63,7 @@ task2_shelf_plate2 = [
 food = {
     "prefix": "food",
     "items": [
-        "ycb_001_chips_can",         # Cheez-it cracker box
+        "ycb_001_cheez-it",          # Cheez-it cracker box
         "ycb_002_sugar_box",         # Domino sugar box
         "ycb_003_jell-o_chocolate_pudding_box",       # jell-o chocolate pudding box
         "ycb_005_spam",              # Spam potted meat can
