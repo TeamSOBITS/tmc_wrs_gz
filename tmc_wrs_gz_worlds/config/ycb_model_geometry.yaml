@@ -1,0 +1,357 @@
+# Measured geometry for the recentred tmc_wrs_gz YCB models.
+#
+# Generated from the collision meshes (meshes/nontextured.stl) after the
+# models were recentred, so every value is expressed about the model's own
+# origin -- which now sits at the footprint centre on the base plane.
+#
+#   radius   Minimal enclosing radius (m) about the origin. A yaw sweep over
+#            +-pi traces exactly this circle, so it is the clearance figure a
+#            randomized-placement check needs: reject a sample landing within
+#            radius + other.radius of an already-placed model.
+#   height   Mesh extent along z (m), base plane to highest point.
+#   offset   Shift (m) baked into the model's visual/collision/inertial poses
+#            to move the origin. Recorded for traceability; consumers want
+#            radius and height.
+#
+# handle_excluded: true means a protruding grip was left out of both the
+# centre and the radius, so the radius bounds the body only and the grip can
+# reach outside it. Applied to round-bodied vessels, where including the grip
+# would drag the centre off the body and inflate the circle. Elongated tools
+# (hammer, wrench, spatula, screwdrivers) keep their full extent, so their
+# circle really does contain them at any yaw.
+#
+# Consumers read this by MODEL NAME. world_reset_sobit_home.yaml keeps its own
+# per-preset `radius:` entries because the node reads those as ROS parameters
+# under world_reset.<preset>.<alias>; copy the value from here when adding a
+# model to a preset.
+#
+# Regenerate rather than hand-editing: the numbers come from the meshes.
+
+ycb_models:
+  ycb_001_cheez-it:
+    radius: 0.0866
+    height: 0.2130
+    offset: [0.013059, 0.014855, 0.003145]
+  ycb_002_sugar_box:
+    radius: 0.0503
+    height: 0.1759
+    offset: [0.007431, 0.016636, -0.000090]
+  ycb_003_jell-o_chocolate_pudding_box:
+    radius: 0.0674
+    height: 0.0385
+    offset: [-0.000944, -0.019724, 0.000431]
+  ycb_005_spam:
+    radius: 0.0510
+    height: 0.0808
+    offset: [0.033278, 0.026715, 0.003046]
+  ycb_006_coffee_can:
+    radius: 0.0519
+    height: 0.1360
+    offset: [0.017631, 0.009422, -0.003179]
+  ycb_006_mustard_bottle:
+    radius: 0.0491
+    height: 0.1916
+    offset: [0.015182, 0.023351, 0.003036]
+  ycb_007_tuna_fish_can:
+    radius: 0.0428
+    height: 0.0331
+    offset: [0.026133, 0.022134, 0.003071]
+  ycb_008_pudding_box:
+    radius: 0.0697
+    height: 0.0384
+    offset: [-0.000649, -0.019156, 0.000354]
+  ycb_009_gelatin_box:
+    radius: 0.0560
+    height: 0.0297
+    offset: [0.022921, 0.008089, 0.000409]
+  ycb_010_tomato_soup_can:
+    radius: 0.0344
+    height: 0.1013
+    offset: [0.009249, -0.084126, -0.000337]
+  ycb_011_banana:
+    radius: 0.1027
+    height: 0.0363
+    offset: [-0.011524, 0.007245, 0.000180]
+  ycb_012_strawberry:
+    radius: 0.0297
+    height: 0.0452
+    offset: [0.000870, -0.015849, 0.000050]
+  ycb_013_apple:
+    radius: 0.0387
+    height: 0.0715
+    offset: [-0.000899, 0.003831, 0.000201]
+  ycb_014_lemon:
+    radius: 0.0364
+    height: 0.0528
+    offset: [0.010570, -0.021708, 0.000046]
+  ycb_015_peach:
+    radius: 0.0325
+    height: 0.0585
+    offset: [0.014253, -0.005633, 0.000132]
+  ycb_016_pear:
+    radius: 0.0499
+    height: 0.0653
+    offset: [0.033287, -0.017697, 0.000083]
+  ycb_017_orange:
+    radius: 0.0370
+    height: 0.0709
+    offset: [0.007009, 0.018434, 0.000034]
+  ycb_018_plum:
+    radius: 0.0287
+    height: 0.0528
+    offset: [0.007819, -0.019500, 0.000153]
+  ycb_019_pitcher_base:
+    radius: 0.0716
+    height: 0.2427
+    offset: [0.013622, -0.033894, 0.003126]
+    handle_excluded: true
+  ycb_021_bleach_cleanser:
+    radius: 0.0523
+    height: 0.2508
+    offset: [0.021625, -0.011704, 0.000722]
+  ycb_022_windex_bottle:
+    radius: 0.1413
+    height: 0.2697
+    offset: [0.016022, -0.023376, -0.135082]
+    # measured in its resting (lying) attitude; cannot stand upright
+  ycb_024_bowl:
+    radius: 0.0813
+    height: 0.0553
+    offset: [0.015109, 0.043640, 0.000580]
+  ycb_025_mug:
+    radius: 0.0446
+    height: 0.0814
+    offset: [0.014776, -0.016853, 0.000589]
+    handle_excluded: true
+  ycb_026_sponge:
+    radius: 0.0656
+    height: 0.0183
+    offset: [0.015670, -0.013825, -0.000529]
+  ycb_027_skillet:
+    radius: 0.1488
+    height: 0.1416
+    offset: [0.033816, -0.037967, 0.008805]
+    handle_excluded: true
+  ycb_028_skillet_lid:
+    radius: 0.1350
+    height: 0.0757
+    offset: [-0.009497, -0.024243, 0.004689]
+    handle_excluded: true
+  ycb_029_plate:
+    radius: 0.1308
+    height: 0.0267
+    offset: [0.011741, -0.000252, 0.003162]
+  ycb_030_fork:
+    radius: 0.0982
+    height: 0.0148
+    offset: [0.024948, 0.022365, 0.000205]
+  ycb_031_spoon:
+    radius: 0.0983
+    height: 0.0205
+    offset: [0.027001, 0.005207, 0.000503]
+  ycb_032_knife:
+    radius: 0.1067
+    height: 0.0223
+    offset: [0.018933, 0.027556, 0.007378]
+  ycb_033_spatula:
+    radius: 0.1613
+    height: 0.0321
+    offset: [0.027347, 0.096829, 0.000193]
+  ycb_035_power_drill:
+    radius: 0.1219
+    height: 0.0578
+    offset: [0.046314, -0.010766, 0.003819]
+  ycb_036_wood_block:
+    radius: 0.0607
+    height: 0.2056
+    offset: [-0.023842, 0.009774, -0.000060]
+  ycb_037_scissors:
+    radius: 0.1102
+    height: 0.0153
+    offset: [-0.009675, -0.035513, 0.000273]
+  ycb_038_padlock:
+    radius: 0.0467
+    height: 0.0288
+    offset: [0.017884, -0.002983, 0.000201]
+  ycb_040_large_marker:
+    radius: 0.0606
+    height: 0.0183
+    offset: [0.035609, 0.005075, 0.000111]
+  ycb_042_adjustable_wrench:
+    radius: 0.1049
+    height: 0.0134
+    offset: [0.003507, 0.012516, 0.002738]
+  ycb_043_phillips_screwdriver:
+    radius: 0.1099
+    height: 0.0348
+    offset: [0.042219, -0.003940, -0.000135]
+  ycb_044_flat_screwdriver:
+    radius: 0.1101
+    height: 0.0345
+    offset: [0.012320, -0.010702, 0.000253]
+  ycb_048_hammer:
+    radius: 0.1788
+    height: 0.0326
+    offset: [0.037838, 0.022994, 0.000677]
+  ycb_050_medium_clamp:
+    radius: 0.0561
+    height: 0.0256
+    offset: [-0.015828, 0.010168, 0.000276]
+  ycb_051_large_clamp:
+    radius: 0.1000
+    height: 0.0386
+    offset: [0.014691, 0.008162, -0.000057]
+  ycb_052_extra_large_clamp:
+    radius: 0.1286
+    height: 0.0358
+    offset: [0.019714, 0.024754, 0.000178]
+  ycb_053_mini_soccer_ball:
+    radius: 0.0650
+    height: 0.1255
+    offset: [0.005755, -0.010678, 0.000302]
+  ycb_054_softball:
+    radius: 0.0487
+    height: 0.0947
+    offset: [0.019503, -0.010821, 0.000223]
+  ycb_055_baseball:
+    radius: 0.0370
+    height: 0.0724
+    offset: [0.010071, 0.048228, 0.000167]
+  ycb_056_tennis_ball:
+    radius: 0.0336
+    height: 0.0661
+    offset: [-0.008239, 0.044300, -0.000012]
+  ycb_057_racquetball:
+    radius: 0.0280
+    height: 0.0554
+    offset: [0.009059, 0.122243, 0.000126]
+  ycb_058_golf_ball:
+    radius: 0.0213
+    height: 0.0420
+    offset: [0.006576, 0.030435, 0.000088]
+  ycb_059_chain:
+    radius: 0.1639
+    height: 0.0254
+    offset: [0.037975, -0.021170, 0.000680]
+  ycb_061_foam_brick:
+    radius: 0.0459
+    height: 0.0510
+    offset: [0.018345, -0.017153, 0.000289]
+  ycb_062_dice:
+    radius: 0.0109
+    height: 0.0174
+    offset: [0.011135, -0.009146, 0.000278]
+  ycb_063-a_marbles:
+    radius: 0.0441
+    height: 0.0702
+    offset: [0.005875, -0.028639, 0.000339]
+  ycb_063-b_marbles:
+    radius: 0.0176
+    height: 0.0343
+    offset: [0.009093, 0.045135, 0.000232]
+  ycb_065-a_cups:
+    radius: 0.0286
+    height: 0.0609
+    offset: [0.031747, 0.045326, 0.000297]
+  ycb_065-b_cups:
+    radius: 0.0302
+    height: 0.0635
+    offset: [0.027837, 0.056185, 0.000232]
+  ycb_065-c_cups:
+    radius: 0.0325
+    height: 0.0660
+    offset: [0.015343, 0.067323, 0.000185]
+  ycb_065-d_cups:
+    radius: 0.0356
+    height: 0.0684
+    offset: [0.019622, 0.062449, 0.000206]
+  ycb_065-e_cups:
+    radius: 0.0376
+    height: 0.0709
+    offset: [0.021161, 0.078046, 0.000922]
+  ycb_065-f_cups:
+    radius: 0.0403
+    height: 0.0721
+    offset: [0.033169, -0.026278, 0.000359]
+  ycb_065-g_cups:
+    radius: 0.0440
+    height: 0.0737
+    offset: [-0.014341, -0.028039, 0.000595]
+  ycb_065-h_cups:
+    radius: 0.0464
+    height: 0.0748
+    offset: [-0.003548, -0.014015, 0.000358]
+  ycb_065-i_cups:
+    radius: 0.0503
+    height: 0.0756
+    offset: [0.011359, -0.001853, 0.000463]
+  ycb_065-j_cups:
+    radius: 0.0520
+    height: 0.0755
+    offset: [0.023666, 0.016850, 0.000286]
+  ycb_070-a_colored_wood_blocks:
+    radius: 0.0936
+    height: 0.1634
+    offset: [-0.019424, -0.009012, -0.000808]
+  ycb_070-b_colored_wood_blocks:
+    radius: 0.0178
+    height: 0.0257
+    offset: [0.018774, 0.008846, 0.000216]
+  ycb_071_nine_hole_peg_test:
+    radius: 0.1001
+    height: 0.0406
+    offset: [0.000803, -0.013579, 0.000298]
+  ycb_072-a_toy_airplane:
+    radius: 0.1550
+    height: 0.1842
+    offset: [-0.034128, -0.006056, 0.000650]
+  ycb_072-b_toy_airplane:
+    radius: 0.1021
+    height: 0.0591
+    offset: [0.049784, -0.004611, 0.000410]
+  ycb_072-c_toy_airplane:
+    radius: 0.0154
+    height: 0.0666
+    offset: [0.033194, -0.003485, -0.000002]
+  ycb_072-d_toy_airplane:
+    radius: 0.0154
+    height: 0.0662
+    offset: [0.022371, -0.001596, 0.000026]
+  ycb_072-e_toy_airplane:
+    radius: 0.0154
+    height: 0.0658
+    offset: [0.015576, 0.007730, -0.000049]
+  ycb_073-a_lego_duplo:
+    radius: 0.0353
+    height: 0.0233
+    offset: [0.016598, 0.009587, 0.000274]
+  ycb_073-b_lego_duplo:
+    radius: 0.0223
+    height: 0.0428
+    offset: [0.020004, 0.020761, 0.000237]
+  ycb_073-c_lego_duplo:
+    radius: 0.0357
+    height: 0.0231
+    offset: [0.013261, 0.022704, 0.000262]
+  ycb_073-d_lego_duplo:
+    radius: 0.0282
+    height: 0.0427
+    offset: [0.022119, 0.027816, 0.000277]
+  ycb_073-e_lego_duplo:
+    radius: 0.0502
+    height: 0.0423
+    offset: [0.023325, 0.050265, 0.000204]
+  ycb_073-f_lego_duplo:
+    radius: 0.0223
+    height: 0.0430
+    offset: [0.028386, 0.066586, 0.000245]
+  ycb_073-g_lego_duplo:
+    radius: 0.0928
+    height: 0.0585
+    offset: [0.015968, 0.091642, 0.000687]
+    handle_excluded: true
+    # thin arm beyond y=0 excluded from centre and radius
+  ycb_077_rubiks_cube:
+    radius: 0.0398
+    height: 0.0577
+    offset: [0.016134, 0.000500, 0.000249]

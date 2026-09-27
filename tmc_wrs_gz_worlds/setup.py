@@ -39,7 +39,7 @@ setup(
     name=package_name,
     version='0.21.2',
     packages=[package_name],
-    data_files=package_files(data_files, ['models/', 'worlds/', 'hooks']),
+    data_files=package_files(data_files, ['models/', 'worlds/', 'hooks', 'config/']),
     install_requires=['setuptools'],
     zip_safe=True,
     author='Yosuke Matsusaka, Nobuyuki Matsuno',
