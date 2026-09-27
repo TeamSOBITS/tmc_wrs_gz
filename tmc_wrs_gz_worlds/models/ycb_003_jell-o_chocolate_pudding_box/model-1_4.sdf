@@ -1,10 +1,15 @@
 <?xml version="1.0" ?>
+<!-- RECENTRED: origin moved to the footprint centre on the base
+     plane, so a spawn pose addresses the visible object and a
+     z-rotation spins it about its own axis. Offset applied to
+     visual, collision and inertial poses: -0.000944 -0.019724 0.000431
+     Yaw-safe radius about this origin: 0.0674 m -->
 <sdf version="1.8">
   <model name='ycb_003_jell-o_chocolate_pudding_box'>
     <link name='body'>
       <inertial>
         <mass>0.461392313357</mass>
-        <pose>0.00151764956966 0.018795882065 0.0186577019787 0 0 0</pose>
+        <pose>0.00057364957 -0.000928117935 0.019088702 0 0 0</pose>
         <inertia>
           <ixx>0.000374350992977</ixx>
           <ixy>-6.77018723742e-05</ixy>
@@ -16,7 +21,7 @@
       </inertial>
 
       <visual name='ycb_003_jell-o_chocolate_pudding_box_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>-0.000944 -0.019724 0.000431 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_003_jell-o_chocolate_pudding_box/meshes/textured.dae</uri>
@@ -25,7 +30,7 @@
       </visual>
 
       <collision name='ycb_003_jell-o_chocolate_pudding_box_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>-0.000944 -0.019724 0.000431 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_003_jell-o_chocolate_pudding_box/meshes/nontextured.stl</uri>

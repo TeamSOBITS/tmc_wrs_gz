@@ -1,10 +1,15 @@
 <?xml version="1.0" ?>
+<!-- RECENTRED: origin moved to the footprint centre on the base
+     plane, so a spawn pose addresses the visible object and a
+     z-rotation spins it about its own axis. Offset applied to
+     visual, collision and inertial poses: 0.024948 0.022365 0.000205
+     Yaw-safe radius about this origin: 0.0982 m -->
 <sdf version='1.8'>
   <model name='ycb_030_fork'>
     <link name='body'>
       <inertial>
         <mass>0.034</mass>
-        <pose>0.00849956163703 -0.0215331125169 0.00670927429124 0 0 0</pose>
+        <pose>0.0334475616 0.000831887483 0.00691427429 0 0 0</pose>
         <inertia>
           <ixx>1.15216206502e-06</ixx>
           <ixy>8.22983124788e-08</ixy>
@@ -15,7 +20,7 @@
         </inertia>
       </inertial>
       <visual name='ycb_030_fork_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.024948 0.022365 0.000205 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_030_fork/meshes/textured.dae</uri>
@@ -23,7 +28,7 @@
         </geometry>
       </visual>
       <collision name='ycb_030_fork_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.024948 0.022365 0.000205 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_030_fork/meshes/nontextured.stl</uri>

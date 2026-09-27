@@ -1,10 +1,15 @@
 <?xml version="1.0" ?>
+<!-- RECENTRED: origin moved to the footprint centre on the base
+     plane, so a spawn pose addresses the visible object and a
+     z-rotation spins it about its own axis. Offset applied to
+     visual, collision and inertial poses: 0.016134 0.000500 0.000249
+     Yaw-safe radius about this origin: 0.0398 m -->
 <sdf version='1.8'>
   <model name='ycb_077_rubiks_cube'>
     <link name='body'>
       <inertial>
         <mass>0.094</mass>
-        <pose>-0.0162190498434 -0.000485290597815 0.0285899281485 0 0 0</pose>
+        <pose>-8.50498434e-05 1.47094022e-05 0.0288389281 0 0 0</pose>
         <inertia>
           <ixx>5.06042440183e-05</ixx>
           <ixy>5.65109585679e-08</ixy>
@@ -15,7 +20,7 @@
         </inertia>
       </inertial>
       <visual name='ycb_077_rubiks_cube_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.016134 0.0005 0.000249 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_077_rubiks_cube/meshes/textured.dae</uri>
@@ -23,7 +28,7 @@
         </geometry>
       </visual>
       <collision name='ycb_077_rubiks_cube_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.016134 0.0005 0.000249 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_077_rubiks_cube/meshes/nontextured.stl</uri>
