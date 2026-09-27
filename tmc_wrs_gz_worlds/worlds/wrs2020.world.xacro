@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 -->
 <sdf version='1.8' xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <world name='default'>
+  <world name='wrs2020'>
 
     <!-- Physics -->
     <physics name="1ms" type="ignored">
