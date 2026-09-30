@@ -2,15 +2,15 @@
 <!-- RECENTRED: origin moved to the footprint centre on the base
      plane, so a spawn pose addresses the visible object and a
      z-rotation spins it about its own axis. Offset applied to
-     visual, collision and inertial poses: 0.016022 -0.023376 -0.135082
-     Yaw-safe radius about this origin: 0.1413 m
-     measured in its resting (lying) attitude; cannot stand upright -->
+     visual, collision and inertial poses: -0.018184 -0.011658 -0.004325
+     Yaw-safe radius about this origin: 0.0527 m
+     Mesh bases flattened 5 mm: the scanned base is rounded and tips over -->
 <sdf version='1.8'>
   <model name='ycb_022_windex_bottle'>
     <link name='body'>
       <inertial>
         <mass>1.022</mass>
-        <pose>0.0299645643 -0.014945956 -0.0327134613 0 0 0</pose>
+        <pose>-0.0042410126 -0.0032281943 0.0980435470 0 0 0</pose>
         <inertia>
           <ixx>0.00498803796691</ixx>
           <ixy>-4.43347650441e-05</ixy>
@@ -21,7 +21,7 @@
         </inertia>
       </inertial>
       <visual name='ycb_022_windex_bottle_visual'>
-        <pose>0.016022 -0.023376 -0.135082 0 0 0</pose>
+        <pose>-0.018184 -0.011658 -0.004325 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_022_windex_bottle/meshes/textured.dae</uri>
@@ -29,7 +29,7 @@
         </geometry>
       </visual>
       <collision name='ycb_022_windex_bottle_collision'>
-        <pose>0.016022 -0.023376 -0.135082 0 0 0</pose>
+        <pose>-0.018184 -0.011658 -0.004325 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_022_windex_bottle/meshes/nontextured.stl</uri>

@@ -110,10 +110,10 @@ ycb_models:
     height: 0.2508
     offset: [0.021625, -0.011704, 0.000722]
   ycb_022_windex_bottle:
-    radius: 0.1413
-    height: 0.2697
-    offset: [0.016022, -0.023376, -0.135082]
-    # measured in its resting (lying) attitude; cannot stand upright
+    radius: 0.0527
+    height: 0.2647
+    offset: [-0.018184, -0.011658, -0.004325]
+    # mesh bases flattened 5 mm; the scanned base is rounded and tips over
   ycb_024_bowl:
     radius: 0.0813
     height: 0.0553
