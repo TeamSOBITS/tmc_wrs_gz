@@ -1,10 +1,15 @@
 <?xml version="1.0" ?>
+<!-- RECENTRED: origin moved to the footprint centre on the base
+     plane, so a spawn pose addresses the visible object and a
+     z-rotation spins it about its own axis. Offset applied to
+     visual, collision and inertial poses: 0.028386 0.066586 0.000245
+     Yaw-safe radius about this origin: 0.0223 m -->
 <sdf version='1.8'>
   <model name='ycb_073-f_lego_duplo'>
     <link name='body'>
       <inertial>
         <mass>0.0417809308719</mass>
-        <pose>-0.0283036531267 -0.066461090192 0.0236072058656 0 0 0</pose>
+        <pose>8.23468733e-05 0.000124909808 0.0238522059 0 0 0</pose>
         <inertia>
           <ixx>7.97892885422e-06</ixx>
           <ixy>-1.27195776216e-09</ixy>
@@ -15,7 +20,7 @@
         </inertia>
       </inertial>
       <visual name='ycb_073-f_lego_duplo_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.028386 0.066586 0.000245 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_073-f_lego_duplo/meshes/textured.dae</uri>
@@ -23,7 +28,7 @@
         </geometry>
       </visual>
       <collision name='ycb_073-f_lego_duplo_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.028386 0.066586 0.000245 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_073-f_lego_duplo/meshes/nontextured.stl</uri>

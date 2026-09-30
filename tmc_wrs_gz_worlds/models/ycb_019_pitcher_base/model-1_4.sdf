@@ -1,10 +1,16 @@
 <?xml version="1.0" ?>
+<!-- RECENTRED: origin moved to the footprint centre on the base
+     plane, so a spawn pose addresses the visible object and a
+     z-rotation spins it about its own axis. Offset applied to
+     visual, collision and inertial poses: 0.013622 -0.033894 0.003126
+     Yaw-safe radius about this origin: 0.1051 m
+     (body alone 0.0716 m; handle excluded from centre only) -->
 <sdf version='1.8'>
   <model name='ycb_019_pitcher_base'>
     <link name='body'>
       <inertial>
         <mass>0.244</mass>
-        <pose>-0.0134134466187 0.0334773624643 0.122636247613 0 0 0</pose>
+        <pose>0.000208553381 -0.000416637536 0.125762248 0 0 0</pose>
         <inertia>
           <ixx>0.00127691830254</ixx>
           <ixy>-7.64926731428e-06</ixy>
@@ -15,7 +21,7 @@
         </inertia>
       </inertial>
       <visual name='ycb_019_pitcher_base_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.013622 -0.033894 0.003126 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_019_pitcher_base/meshes/textured.dae</uri>
@@ -23,7 +29,7 @@
         </geometry>
       </visual>
       <collision name='ycb_019_pitcher_base_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0.013622 -0.033894 0.003126 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://ycb_019_pitcher_base/meshes/nontextured.stl</uri>
