@@ -4,21 +4,24 @@
 # models were recentred, so every value is expressed about the model's own
 # origin -- which now sits at the footprint centre on the base plane.
 #
-#   radius   Minimal enclosing radius (m) about the origin. A yaw sweep over
-#            +-pi traces exactly this circle, so it is the clearance figure a
+#   radius   Enclosing radius (m) of the whole collision mesh, handles and
+#            protrusions included, about the origin. A yaw sweep over +-pi
+#            stays inside this circle, so it is the clearance figure a
 #            randomized-placement check needs: reject a sample landing within
 #            radius + other.radius of an already-placed model.
+#   body_radius
+#            Only on models with a protruding grip: the radius of the body
+#            alone. Informational -- the grip reaches beyond it, so never use
+#            it for placement checks.
 #   height   Mesh extent along z (m), base plane to highest point.
 #   offset   Shift (m) baked into the model's visual/collision/inertial poses
 #            to move the origin. Recorded for traceability; consumers want
 #            radius and height.
 #
-# handle_excluded: true means a protruding grip was left out of both the
-# centre and the radius, so the radius bounds the body only and the grip can
-# reach outside it. Applied to round-bodied vessels, where including the grip
-# would drag the centre off the body and inflate the circle. Elongated tools
-# (hammer, wrench, spatula, screwdrivers) keep their full extent, so their
-# circle really does contain them at any yaw.
+# For round-bodied vessels with a grip (pitcher, mug, skillet, duplo), the
+# origin is the body centre with the grip left out, so the origin addresses
+# the visible body; only radius includes the grip. Elongated tools (hammer,
+# wrench, spatula, screwdrivers) centre on their full extent.
 #
 # Consumers read this by MODEL NAME. world_reset_sobit_home.yaml keeps its own
 # per-preset `radius:` entries because the node reads those as ROS parameters
@@ -101,10 +104,10 @@ ycb_models:
     height: 0.0528
     offset: [0.007819, -0.019500, 0.000153]
   ycb_019_pitcher_base:
-    radius: 0.0716
+    radius: 0.1051
+    body_radius: 0.0716
     height: 0.2427
     offset: [0.013622, -0.033894, 0.003126]
-    handle_excluded: true
   ycb_021_bleach_cleanser:
     radius: 0.0523
     height: 0.2508
@@ -119,24 +122,23 @@ ycb_models:
     height: 0.0553
     offset: [0.015109, 0.043640, 0.000580]
   ycb_025_mug:
-    radius: 0.0446
+    radius: 0.0642
+    body_radius: 0.0446
     height: 0.0814
     offset: [0.014776, -0.016853, 0.000589]
-    handle_excluded: true
   ycb_026_sponge:
     radius: 0.0656
     height: 0.0183
     offset: [0.015670, -0.013825, -0.000529]
   ycb_027_skillet:
-    radius: 0.1488
+    radius: 0.2970
+    body_radius: 0.1488
     height: 0.1416
     offset: [0.033816, -0.037967, 0.008805]
-    handle_excluded: true
   ycb_028_skillet_lid:
     radius: 0.1350
     height: 0.0757
     offset: [-0.009497, -0.024243, 0.004689]
-    handle_excluded: true
   ycb_029_plate:
     radius: 0.1308
     height: 0.0267
@@ -346,11 +348,11 @@ ycb_models:
     height: 0.0430
     offset: [0.028386, 0.066586, 0.000245]
   ycb_073-g_lego_duplo:
-    radius: 0.0928
+    radius: 0.2134
+    body_radius: 0.0928
     height: 0.0585
     offset: [0.015968, 0.091642, 0.000687]
-    handle_excluded: true
-    # thin arm beyond y=0 excluded from centre and radius
+    # thin arm beyond y=0 excluded from centre and body_radius
   ycb_077_rubiks_cube:
     radius: 0.0398
     height: 0.0577

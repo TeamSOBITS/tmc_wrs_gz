@@ -3,8 +3,8 @@
      plane, so a spawn pose addresses the visible object and a
      z-rotation spins it about its own axis. Offset applied to
      visual, collision and inertial poses: 0.015968 0.091642 0.000687
-     Yaw-safe radius about this origin: 0.0928 m  (handle excluded)
-     thin arm beyond y=0 excluded from centre and radius -->
+     Yaw-safe radius about this origin: 0.2134 m
+     (body alone 0.0928 m; thin arm beyond y=0 excluded from centre only) -->
 <sdf version='1.8'>
   <model name='ycb_073-g_lego_duplo'>
     <link name='body'>
